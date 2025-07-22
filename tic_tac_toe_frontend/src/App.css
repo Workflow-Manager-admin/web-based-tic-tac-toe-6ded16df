@@ -189,10 +189,27 @@ html, body, #root {
   letter-spacing: 1px;
 }
 
+/* Added support for alt-style button (used for difficulty and nav) */
+.ttt-btn-alt {
+  background: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
+  font-weight: 700;
+  transition: background 0.14s, color 0.12s, border-color 0.13s;
+}
+.ttt-btn-alt:focus, .ttt-btn-alt:hover {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+  border-color: var(--accent-color);
+}
+
 @media (max-width: 500px) {
   .ttt-footer {
     margin-top: 1.6rem;
     font-size: 0.8rem;
+  }
+  .ttt-controls {
+    flex-direction: column;
   }
 }
 
